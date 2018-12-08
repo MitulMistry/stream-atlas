@@ -56,6 +56,8 @@ group :development, :test do
   gem 'rspec-rails'
   # Set up factories for models
   gem 'factory_bot_rails'
+  # Use .env file for storing development keys
+  gem 'dotenv-rails'
 end
 
 group :development do

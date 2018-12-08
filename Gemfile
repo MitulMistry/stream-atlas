@@ -35,12 +35,27 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use Devise for authentication
+gem 'devise', '~> 4.5'
+# Allow OAuth with Twitch
+gem 'omniauth-twitch', '~> 0.1.2'
+# Make back end API requests
+gem 'faraday', '~> 0.15.4'
+# Serialize models for front end API requests
+gem 'active_model_serializers', '~> 0.10.8'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Use Faker to generate sample data
+  gem 'faker'
+  # Use Rspec for back end testing
+  gem 'rspec-rails'
+  # Set up factories for models
+  gem 'factory_bot_rails'
 end
 
 group :development do
